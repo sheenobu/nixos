@@ -19,8 +19,18 @@
 	# Common Packages
 	environment.systemPackages = with pkgs; [
 		# core
-		wget tmux curl wget w3m nixops nox file autojump unrar
-		socat binutils
+		wget
+		tmux
+		curl
+		wget
+		w3m
+		nixops
+		nox
+		file
+		autojump
+		unrar
+		socat
+		binutils
 		neovim
 
 		# programming

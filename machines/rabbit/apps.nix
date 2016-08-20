@@ -18,7 +18,14 @@
         wineUnstable
         qemu
 
+        # terminal
+        rxvt_unicode
+
+        # social
+        slack
     ];
+
+
 }
 
 
