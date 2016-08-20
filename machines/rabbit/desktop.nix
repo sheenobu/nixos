@@ -44,7 +44,11 @@
   };
 
   fonts = {
-    fontconfig.enable = true;
+    fontconfig = {
+      enable = true;
+      dpi = 120;
+    };
+
     enableCoreFonts = true;
     enableFontDir = true;
     enableGhostscriptFonts = true;
