@@ -13,8 +13,8 @@
     compton      # for compositor
     xsel         # for cli copy/paste
     lxappearance # for theming changes
+    i3status
 
-    # utils
     xorg.xbacklight
     xorg.xwininfo
     sheenobupkgs.fluxui
@@ -39,6 +39,7 @@
     layout = "us";
 
     windowManager.i3.enable = true;
+    windowManager.i3.configFile = ./i3/config;
 
     displayManager.lightdm.enable = true;
   };

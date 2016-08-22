@@ -2,6 +2,7 @@
 {
   imports = [
     ../modules/common.nix
+    ../modules/users.nix
     ../machines/rabbit/base.nix
     ../machines/rabbit/desktop.nix
     ../machines/rabbit/apps.nix
