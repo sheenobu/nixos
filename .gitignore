@@ -1,3 +1,5 @@
 *.qcow2
 result
 work
+configuration.nix
+hardware-configuration.nix

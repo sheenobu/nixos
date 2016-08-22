@@ -1,10 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-	require = [
-		./users.nix
-	];
-
 	# extend nixpkgs with our own package
 	nixpkgs.config.packageOverrides = pkgs: {
 		inherit (import ./../pkgs { inherit pkgs; inherit lib; }) sheenobupkgs;
@@ -32,6 +28,8 @@
 		socat
 		binutils
 		neovim
+		mercurial
+		socat
 
 		# programming
 		ack
