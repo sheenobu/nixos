@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
 	users.extraUsers.sheenobu = {
 		isNormalUser = true;

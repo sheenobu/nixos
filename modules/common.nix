@@ -7,7 +7,7 @@
 	};
 
 	# let's make sure only NixOS can handle users
-	users.mutableUsers = false;
+#	users.mutableUsers = false;
 
 	# see https://github.com/NixOS/nixpkgs/commit/ee8e15fe76a235ae3583d4e8cb4bb370f28c5eae
 	programs.bash.enableCompletion = true;

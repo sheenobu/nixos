@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
+        # programming utilities
+        gcc
+        python35Packages.awscli
+        sheenobupkgs.vscode
+        sheenobupkgs.riot
 
         # media
         #spotify
