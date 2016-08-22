@@ -3,6 +3,7 @@
   imports = [
     ../modules/common.nix
     ../modules/users.nix
+    ../modules/tmux.nix
     ../machines/rabbit/base.nix
     ../machines/rabbit/desktop.nix
     ../machines/rabbit/apps.nix

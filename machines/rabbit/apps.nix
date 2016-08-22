@@ -30,6 +30,10 @@
         slack
     ];
 
+    programs.tmux = {
+      enable = true;
+      extraTmuxConf = builtins.readFile ./tmux/config;
+    };
 
 }
 
