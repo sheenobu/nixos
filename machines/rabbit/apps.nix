@@ -6,6 +6,7 @@
         python35Packages.awscli
         sheenobupkgs.vscode
         sheenobupkgs.riot
+        sheenobupkgs.keybase_go
 
         # media
         #spotify

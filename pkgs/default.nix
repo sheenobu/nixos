@@ -48,6 +48,12 @@ let
 
     # backport to 16.03
     gosu = (pkgs.callPackage ./gosu) {};
+
+    # backport to 16.03
+    keybase_go = (pkgs.callPackage ./keybase {
+      buildGoPackage = pkgs.go16Packages.buildGoPackage;
+    }).bin // { outputs = [ "bin" ]; };
+
   };
 in pkgs // {
   inherit sheenobupkgs;
