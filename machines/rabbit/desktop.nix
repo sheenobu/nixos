@@ -26,6 +26,7 @@
  ];
 
   environment.variables.BROWSER = "chromium";
+  environment.etc."sheenobu/Xdefaults".source = ./Xdefaults;
 
   # audio support
   nixpkgs.config.pulseaudio = true;
@@ -61,5 +62,7 @@
       unifont # some international languages
     ];
   };
+
+
 }
 
