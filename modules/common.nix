@@ -28,12 +28,13 @@
 		socat
 		binutils
 		neovim
-		mercurial
 		socat
+		tree
 
 		# programming
 		ack
 		git
+		mercurial
 
 		# manpages
 		manpages
