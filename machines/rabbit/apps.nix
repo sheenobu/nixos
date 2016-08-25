@@ -26,6 +26,7 @@
 
         # terminal
         rxvt_unicode
+        terminus_font
 
         # social
         slack
