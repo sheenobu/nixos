@@ -6,7 +6,7 @@
      (pkgs.sheenobupkgs.r8168 { kernel = pkgs.linux; })
     ];
     kernelPackages = pkgs.linuxPackages;
-    kernelParams = [ "ipv6.disable=1" ]; # "pcie_aspm=off" ];
+    kernelParams = [ "ipv6.disable=0" ]; # "pcie_aspm=off" ];
     loader.gummiboot.enable=true;
   };
 }

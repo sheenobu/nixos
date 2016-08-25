@@ -19,6 +19,8 @@
         package = pkgs.pulseaudioFull;
     };
 
+    virtualisation.docker.enable = true;
+
     networking = {
         networkmanager.enable = true;
         enableIPv6 = false;
