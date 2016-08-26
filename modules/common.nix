@@ -35,6 +35,7 @@
 		ack
 		git
 		mercurial
+		go_1_6
 
 		# manpages
 		manpages
