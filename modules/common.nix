@@ -44,10 +44,6 @@
 
 	environment.variables.EDITOR = "nvim";
 
-	environment.shellInit = ''
-		alias vim=nvim
-	'';
-
 	# every machine should be running antivirus
 	services = {
 		clamav = {
