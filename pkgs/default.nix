@@ -54,6 +54,11 @@ let
       buildGoPackage = pkgs.go16Packages.buildGoPackage;
     }).bin // { outputs = [ "bin" ]; };
 
+    # backport to 16.03
+    kubernetes = (pkgs.callPackage ./kubernetes {
+      go = pkgs.go_1_6;
+    });
+
   };
 in pkgs // {
   inherit sheenobupkgs;
