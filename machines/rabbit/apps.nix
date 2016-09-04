@@ -7,6 +7,7 @@
         sheenobupkgs.vscode
         sheenobupkgs.riot
         sheenobupkgs.keybase_go
+        sheenobupkgs.kubernetes
 
         # media
         #spotify
