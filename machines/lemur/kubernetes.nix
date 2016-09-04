@@ -1,7 +1,12 @@
 { config, pkgs, ...}:
 {
-  services.kubernetes.roles = [ "master" "node" ];
-  services.kubernetes.package = pkgs.sheenobupkgs.kubernetes;
+
+  imports = [
+    ../services/kubernetes.nix
+  ];
+
+  services.kubernetesX.roles = [ "master" "node" ];
+  services.kubernetesX.package = pkgs.sheenobupkgs.kubernetes;
 
   networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [ 8080 ];
