@@ -12,10 +12,10 @@ let
   makeSearchPathOutput = output: subDir: pkgs: lib.makeSearchPath subDir (map (getOutput output) pkgs);
 
   # let's define our own callPackage to avoid typing all dependencies
-  callPackage = pkgs.lib.callPackageWith (pkgs // sheenobupkgs);
+  callPackage = pkgs.lib.callPackageWith (pkgs // backports);
 
   # our custom packages
-  sheenobupkgs = rec {
+  backports = rec {
 
     # backport to 16.03
     fluxui = (pkgs.callPackage ./xfluxgui/gui.nix {
@@ -40,12 +40,6 @@ let
       atomEnv = atomEnv;
     };
 
-    # not included
-    r8168 = (pkgs.callPackage ./r8168/r8168.nix);
-
-    # not included
-    riot = (pkgs.callPackage ./riot) {};
-
     # backport to 16.03
     gosu = (pkgs.callPackage ./gosu) {};
 
@@ -61,5 +55,5 @@ let
 
   };
 in pkgs // {
-  inherit sheenobupkgs;
+  inherit backports;
 }

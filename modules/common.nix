@@ -3,7 +3,7 @@
 {
 	# extend nixpkgs with our own package
 	nixpkgs.config.packageOverrides = pkgs: {
-		inherit (import ./../pkgs { inherit pkgs; inherit lib; }) sheenobupkgs;
+		inherit (import ./../pkgs/custom.nix { inherit pkgs; inherit lib; }) sheenobupkgs;
 	};
 
 	# let's make sure only NixOS can handle users

@@ -17,7 +17,7 @@
 
     xorg.xbacklight
     xorg.xwininfo
-    sheenobupkgs.fluxui
+    backports.fluxui
 
     # theming
     gtk

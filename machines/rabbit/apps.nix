@@ -4,10 +4,12 @@
         # programming utilities
         gcc
         python35Packages.awscli
-        sheenobupkgs.vscode
+
+        backports.vscode
+        backports.keybase_go
+        backports.kubernetes
+
         sheenobupkgs.riot
-        sheenobupkgs.keybase_go
-        sheenobupkgs.kubernetes
 
         # media
         #spotify
@@ -21,7 +23,7 @@
         baobab # for filesystem visualization
 
         # emulation
-        sheenobupkgs.mednaffe # emulation
+        backports.mednaffe # emulation
         wineUnstable
         qemu
 

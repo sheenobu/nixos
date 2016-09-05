@@ -4,9 +4,9 @@
         # programming utilities
         gcc
         #python35Packages.awscli
-        #sheenobupkgs.vscode
+
         sheenobupkgs.riot
-        sheenobupkgs.keybase_go
+        backports.keybase_go
 
         # browsers
         chromium
