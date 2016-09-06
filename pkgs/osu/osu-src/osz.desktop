@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=osu!
+MimeType=application/x-osz;application/xml
+Exec=env osu-open-file %f
+NoDisplay=true
+StartupNotify=true
+

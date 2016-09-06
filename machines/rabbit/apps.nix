@@ -11,6 +11,9 @@
 
         sheenobupkgs.riot
 
+        sheenobupkgs.osu
+        shared_mime_info
+
         # media
         #spotify
         steam
