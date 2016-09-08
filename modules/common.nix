@@ -1,6 +1,14 @@
 { config, pkgs, lib, ... }:
-
 {
+
+  environment.xdg.mimeTypes."text/nix" = {
+	comment = {
+	  "" = "Nix Language File";
+	};
+	sub-class-of = "text/plain";
+	  globs = [ "*.nix" ];
+	};
+
 	# extend nixpkgs with our own package
 	nixpkgs.config.packageOverrides = pkgs: {
 		inherit (import ./../pkgs/custom.nix { inherit pkgs; inherit lib; }) sheenobupkgs;

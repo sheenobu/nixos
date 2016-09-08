@@ -13,6 +13,7 @@
 
         sheenobupkgs.osu
         shared_mime_info
+        xdg_utils
 
         # media
         #spotify
