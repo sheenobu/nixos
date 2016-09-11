@@ -8,4 +8,18 @@
         consoleKeyMap = "us";
         defaultLocale = "en_US.UTF-8";
     };
+
+    hardware.pulseaudio = {
+        enable = true;
+        support32Bit = true;
+        package = pkgs.pulseaudioFull;
+    };
+
+    virtualisation.docker.enable = true;
+
+    programs.tmux = {
+      enable = true;
+      extraTmuxConf = builtins.readFile ./tmux/config;
+    };
+
 }
