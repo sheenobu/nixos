@@ -13,7 +13,7 @@
   virtualisation.qemu.options = [ "-full-screen -sdl" ];
 
   # disable clamav so we don't try to update the virus DB every time we boot a new system
-  services.clamav.updater.enable = false;
+  services.clamav.updater.enable = lib.mkForce false;
 
   users.users.root.password = "test";
   users.users.sheenobu.password = "test";
