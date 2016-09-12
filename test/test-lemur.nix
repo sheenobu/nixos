@@ -9,6 +9,13 @@
     ../machines/lemur/apps.nix
   ];
 
+  environment.etc."resolution.sh".source = ./resolution.sh;
+
+  services.xserver.windowManager.default = "i3"; # must specify default if auto.enable is on
+  services.xserver.displayManager.auto.enable = true;
+  services.xserver.displayManager.auto.user = "sheenobu";
+  services.xserver.resolutions = { x = 1680; y = 1050; };
+
   virtualisation.memorySize = 1024;
   virtualisation.qemu.options = [ "-full-screen -sdl" ];
 
