@@ -15,6 +15,7 @@
   services.xserver.displayManager.auto.enable = true;
   services.xserver.displayManager.auto.user = "sheenobu";
   services.xserver.resolutions = { x = 1680; y = 1050; };
+  services.xserver.virtualScreen = { x = 1680; y = 1050; };
 
   virtualisation.memorySize = 1024;
   virtualisation.qemu.options = [ "-full-screen -sdl" ];
