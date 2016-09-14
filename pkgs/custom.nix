@@ -9,6 +9,7 @@ let
     r8168 = (pkgs.callPackage ./r8168/r8168.nix);
     riot = (pkgs.callPackage ./riot) {};
     osu = (pkgs.callPackage ./osu) {};
+    nix-home = (pkgs.callPackage ./nix-home) {};
   };
 
 in pkgs // {

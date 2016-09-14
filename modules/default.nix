@@ -33,6 +33,7 @@
     socat
     tree
     psmisc
+    sheenobupkgs.nix-home
 
     # sec (just install both gpg 1 and 2, they say)
     gnupg
