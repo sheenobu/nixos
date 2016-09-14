@@ -19,5 +19,4 @@ mkHome {
   files = {
      ".screenrc" = "${dotfiles}/.screenrc";
   };
-
 }
