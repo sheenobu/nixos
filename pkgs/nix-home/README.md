@@ -13,7 +13,7 @@ in nixhome called `mkHome`.
 	  user = "username";
 	  files = {
 		 ".screenrc" = ./path-to-file;
-		 ".vimrc" = "{somePkg}/path-to-file";
+		 ".vimrc" = "${somePkg}/path-to-file";
 		 ".bashrc".content = ''
 			... bashrc conents
 		 '';
