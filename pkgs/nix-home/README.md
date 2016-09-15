@@ -2,30 +2,4 @@
 
 Utilities for working with user configurations in Nix.
 
-## Supported
-
-`nix-home`, when invoked, automically builds `~/default.nix`, which must define a derivation. 
-The derivation is an overlay that gets linked into your home directory. Additionally, the current derivation will be
-linked at /run/user/$uid/current-home.
-
-There is a helper function in nixhome called `mkHome`, for making the derivation:
-
-	with import <nixpkgs> {};
-	with import <nixhome> { inherit stdenv; inherit pkgs; };
-	mkHome {
-	  user = "username";
-	  files = {
-		 ".screenrc" = ./path-to-file;
-		 ".vimrc" = "${somePkg}/path-to-file";
-		 ".bashrc".content = ''
-			... bashrc conents
-		 '';
-	  };
-	}
-
-## Planned
-
- * nix-home rebuild / switch
- * nix-home --list-generations
- * nix-home --rollback
- * nix-home --gc
+Moved to own repo [sheenobu/nix-home](https://github.com/sheenobu/nix-home).

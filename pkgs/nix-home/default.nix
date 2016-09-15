@@ -1,9 +1,14 @@
-{ stdenv, python }:
+{ stdenv, python, fetchFromGitHub }:
 stdenv.mkDerivation rec {
   version = "0.1.0";
   name = "nix-home-${version}";
 
-  src = ./src;
+  src = fetchFromGitHub {
+  	rev = version;
+  	repo = "nix-home";
+	owner = "sheenobu";
+	sha256 = "12b6m7r7l25fkvagfw2i4jgjqisc1bljf0y9xagpi8rkswrxbjal";
+  };
 
   patchPhase = ''
     substituteInPlace nix-home --replace "NIXHOME" "$out/nix/lib"
@@ -23,7 +28,7 @@ stdenv.mkDerivation rec {
   '';
 
   meta = {
-    homepage = https://github.com/sheenobu/nixos;
+    homepage = https://github.com/sheenobu/nix-home;
     description = "Per-user configuration management via Nix";
     license = stdenv.lib.license.mit;
     platforms = stdenv.lib.platforms.unix;
