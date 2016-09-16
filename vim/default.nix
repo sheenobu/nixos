@@ -6,6 +6,7 @@ let
   callPackage = pkgs.lib.callPackageWith (pkgs // vimPackages);
 
   vimPackages = rec {
+    vimGo = (pkgs.callPackage ./pkgs/vim-go) {};
   };
 
 in pkgs // {
