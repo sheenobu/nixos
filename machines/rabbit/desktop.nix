@@ -56,6 +56,7 @@
     enableGhostscriptFonts = true;
 
     fonts = with pkgs; [
+      terminus_font
       corefonts  # Micrsoft free fonts
       inconsolata  # monospaced
       ubuntu_font_family  # Ubuntu fonts

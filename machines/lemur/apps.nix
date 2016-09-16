@@ -22,7 +22,6 @@
 
     # terminal
     rxvt_unicode
-    terminus_font
 
     # sec
     keepassx
