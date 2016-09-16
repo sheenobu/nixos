@@ -48,6 +48,7 @@
     nox
     sheenobupkgs.nix-home
     nix-prefetch-zip
+    nix-prefetch-git
 
     # programming
     ack
