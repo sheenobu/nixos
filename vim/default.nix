@@ -7,6 +7,7 @@ let
 
   vimPackages = rec {
     vimGo = (pkgs.callPackage ./pkgs/vim-go) {};
+    vimNix = (pkgs.callPackage ./pkgs/vim-nix) {};
   };
 
 in pkgs // {
