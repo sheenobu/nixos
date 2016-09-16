@@ -80,6 +80,7 @@ mkHome {
     '';
 
     ".nvim/bundle/vim-go" = vimPackages.vimGo;
+    ".nvim/bundle/vim-nix" = vimPackages.vimNix;
   };
 
 }
