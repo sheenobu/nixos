@@ -52,6 +52,7 @@
     # programming
     ack
     git
+    gitAndTools.gitflow
     mercurial
     go_1_6
     gnumake
