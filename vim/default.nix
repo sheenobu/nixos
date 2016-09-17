@@ -2,8 +2,9 @@
 
 let
 
-  # let's define our own callPackage to avoid typing all dependencies
-  callPackage = pkgs.lib.callPackageWith (pkgs // vimPackages);
+  vimThemes = rec {
+    tomorrowNight = (pkgs.callPackage ./themes/tomorrow-night) {};
+  };
 
   vimPackages = rec {
     vimGo = (pkgs.callPackage ./pkgs/vim-go) {};
@@ -12,4 +13,5 @@ let
 
 in pkgs // {
   inherit vimPackages;
+  inherit vimThemes;
 }
