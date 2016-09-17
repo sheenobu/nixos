@@ -51,6 +51,9 @@ in
 mkHome {
   user = "sheenobu";
   files = {
+
+    ###### shell start
+
     ".bashrc".content = ''
         source ${rcfiles}/bashrc/bashrc
 
@@ -71,18 +74,24 @@ mkHome {
         export GPG_TTY=$(tty)
       '';
 
-    ".config/nvim/init.vim" = "${rcfiles}/nvimrc";
-
+    ##### X11
 
     ".Xdefaults" = pkgs.writeText "Xdefaults" ''
       ${rofiScheme}
       ${urxvtScheme}
     '';
 
+    ###### git
+
     ".gitconfig" = "${rcfiles}/gitconfig";
 
+    ###### neovim config
+
+    ".config/nvim/init.vim" = "${rcfiles}/nvimrc";
     ".nvim/bundle/vim-go" = vimPackages.vimGo;
     ".nvim/bundle/vim-nix" = vimPackages.vimNix;
+    ".nvim/bundle/tomorrow-night" = "${vimThemes.tomorrowNight}/share/vim";
+
 
   };
 
