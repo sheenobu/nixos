@@ -12,7 +12,7 @@ let
 
   rcfiles = stdenv.mkDerivation {
     name = "sheenobu-rcfiles";
-    src = ./rcfiles;
+    src = ./projects/rcfiles;
     installPhase = copyFilesInstallPhase;
   };
 
@@ -92,6 +92,27 @@ mkHome {
     ".nvim/bundle/vim-nix" = vimPackages.vimNix;
     ".nvim/bundle/tomorrow-night" = "${vimThemes.tomorrowNight}/share/vim";
 
+    ##### i3 config
+
+    ".config/i3/config" = ./i3config;
+    ".config/i3status/config" = ./i3status;
+
+    ##### compton
+
+    ".config/compton.conf" = "${rcfiles}/config/compton.conf";
+
+    ##### xdg
+
+    ".config/user-dirs.dirs".content = ''
+XDG_DESKTOP_DIR="$HOME/desktop"
+XDG_DOCUMENTS_DIR="$HOME/docs"
+XDG_DOWNLOAD_DIR="$HOME/dl"
+XDG_MUSIC_DIR="$HOME/music"
+XDG_PICTURES_DIR="$HOME/pics"
+XDG_PUBLICSHARE_DIR="$HOME/public"
+XDG_TEMPLATES_DIR="$HOME/.templates"
+XDG_VIDEOS_DIR="$HOME/videos"
+'';
 
   };
 
