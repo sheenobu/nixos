@@ -15,17 +15,22 @@
     # utilities
     baobab # for filesystem visualization
     pavucontrol # sound
-    backports.keybase_go
     arandr # resolution
+    nitrogen # wallpaper setting
+    spice_gtk # spicy remote desktop
+    xfce.thunar # filesystem
+    gimp # image editing
 
     # emulation
     qemu
+    backports.mednaffe
 
     # terminal
     rxvt_unicode
 
     # sec
     keepassx
+    backports.keybase_go
 
     # social
     slack
