@@ -53,6 +53,9 @@ let
       go = pkgs.go_1_6;
     });
 
+    # backport to 16.03
+    i3-gaps = (pkgs.callPackage ./i3/gaps.nix) {};
+
   };
 in pkgs // {
   inherit backports;

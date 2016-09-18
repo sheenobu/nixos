@@ -5,6 +5,7 @@
 
   imports = [
     ./tmux.nix
+    ./i3.nix
   ];
 
   nixpkgs.config.packageOverrides = pkgs: {
