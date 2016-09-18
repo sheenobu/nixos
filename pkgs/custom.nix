@@ -10,6 +10,7 @@ let
     riot = (pkgs.callPackage ./riot) {};
     osu = (pkgs.callPackage ./osu) {};
     nix-home = (pkgs.callPackage ./nix-home) {};
+    docker-compose = (pkgs.callPackage ./docker-compose) {};
   };
 
 in pkgs // {
