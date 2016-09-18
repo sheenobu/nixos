@@ -1,13 +1,13 @@
 { stdenv, python, fetchFromGitHub }:
 stdenv.mkDerivation rec {
-  version = "0.1.2";
+  version = "0.2.0";
   name = "nix-home-${version}";
 
   src = fetchFromGitHub {
     rev = version;
     repo = "nix-home";
     owner = "sheenobu";
-    sha256 = "1f22d05fcf6rfm0md8cbr0hvc82mjk041pr9wjy80vr113h2vdal";
+    sha256 = "1g3yf48814p2407m20m73n8rs1hpax2k8lvnfqq29kj1zylpfd1w";
   };
 
   patchPhase = ''
