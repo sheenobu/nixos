@@ -18,7 +18,7 @@
   services.xserver.virtualScreen = { x = 1680; y = 1050; };
 
   virtualisation.memorySize = 1024;
-  virtualisation.qemu.options = [ "-full-screen -sdl" ];
+  virtualisation.qemu.options = [ "-sdl" ];
 
   # disable clamav so we don't try to update the virus DB every time we boot a new system
   services.clamav.updater.enable = lib.mkForce false;
