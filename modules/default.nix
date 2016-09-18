@@ -49,6 +49,7 @@
     sheenobupkgs.nix-home
     nix-prefetch-zip
     nix-prefetch-git
+    patchelf
 
     # programming
     ack
