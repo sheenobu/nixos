@@ -6,6 +6,7 @@
     sheenobupkgs.riot
     gcc
     #python35Packages.awscli
+    sheenobupkgs.docker-compose
 
     # browsers
     chromium
