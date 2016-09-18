@@ -39,8 +39,8 @@
     enable = true;
     layout = "us";
 
-    windowManager.i3.enable = true;
-    windowManager.i3.configFile = ./i3/config;
+    windowManager.i3-gaps.enable = true;
+    windowManager.i3-gaps.configFile = ./i3/config;
 
     displayManager.slim.enable = true;
   };

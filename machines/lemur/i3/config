@@ -126,4 +126,7 @@ bar {
   status_command i3status
 }
 
+gaps inner 5
+gaps outer 5
+
 exec xsetroot -solid "#1d1f21"
