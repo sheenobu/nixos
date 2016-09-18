@@ -26,7 +26,6 @@
  ];
 
   environment.variables.BROWSER = "chromium";
-  environment.etc."sheenobu/Xdefaults".source = ./Xdefaults;
 
   # audio support
   nixpkgs.config.pulseaudio = true;
@@ -40,7 +39,6 @@
     layout = "us";
 
     windowManager.i3-gaps.enable = true;
-    windowManager.i3-gaps.configFile = ./i3/config;
 
     displayManager.slim.enable = true;
   };
