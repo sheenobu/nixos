@@ -11,6 +11,7 @@ let
     osu = (pkgs.callPackage ./osu) {};
     nix-home = (pkgs.callPackage ./nix-home) {};
     docker-compose = (pkgs.callPackage ./docker-compose) {};
+    gb = (pkgs.callPackage ./gb { buildGoPackage = pkgs.go16Packages.buildGoPackage ; }).bin // { outputs = [ "bin" ]; };
   };
 
 in pkgs // {
