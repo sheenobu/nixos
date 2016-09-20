@@ -33,9 +33,9 @@
     socat
     tree
     psmisc
+    unzip
 
     # sec (just install both gpg 1 and 2, they say)
-    gnupg
     gnupg1
 
     # hardware
@@ -58,9 +58,9 @@
     mercurial
     go_1_6
     gnumake
+    sheenobupkgs.gb
 
     # manpages
-    manpages
     posix_man_pages
   ];
 

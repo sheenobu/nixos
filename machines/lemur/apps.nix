@@ -20,10 +20,12 @@
     spice_gtk # spicy remote desktop
     xfce.thunar # filesystem
     gimp # image editing
+    xorg.xkill # killing X windows
 
     # emulation
     qemu
     backports.mednaffe
+    dosbox
 
     # terminal
     rxvt_unicode
