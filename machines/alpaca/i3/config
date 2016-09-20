@@ -98,6 +98,9 @@ new_window pixel 1
 new_float pixel 1
 # hide_edge_borders both
 
+focus_follows_mouse no
+
+
 # class                 border  backgr. text    indicator child_border
 client.focused          #81a2be #81a2be #1d1f21 #81a2be   #81a2be
 client.focused_inactive #373b41 #373b41 #969896 #373b41   #373b41

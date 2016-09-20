@@ -35,6 +35,9 @@ bindsym $mod+space exec rofi -show run
 # Focus on Urgency
 focus_on_window_activation smart
 
+focus_follows_mouse no
+
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
