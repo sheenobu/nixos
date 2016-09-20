@@ -9,6 +9,7 @@
         defaultLocale = "en_US.UTF-8";
     };
 
+    hardware.opengl.driSupport32Bit = true;
     hardware.pulseaudio = {
         enable = true;
         support32Bit = true;
