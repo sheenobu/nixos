@@ -90,6 +90,7 @@ mkHome {
     ".config/nvim/init.vim" = "${rcfiles}/nvimrc";
     ".nvim/bundle/vim-go" = vimPackages.vimGo;
     ".nvim/bundle/vim-nix" = vimPackages.vimNix;
+    ".nvim/bundle/vim-elm" = vimPackages.vimElm;
     ".nvim/bundle/tomorrow-night" = "${vimThemes.tomorrowNight}/share/vim";
 
     ##### i3 config
