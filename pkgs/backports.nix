@@ -49,12 +49,18 @@ let
     }).bin // { outputs = [ "bin" ]; };
 
     # backport to 16.03
+    kbfs = (pkgs.callPackage ./keybase/kbfs.nix {
+      buildGoPackage = pkgs.go16Packages.buildGoPackage;
+    });
+
+    # backport to 16.03
     kubernetes = (pkgs.callPackage ./kubernetes {
       go = pkgs.go_1_6;
     });
 
     # backport to 16.03
     i3-gaps = (pkgs.callPackage ./i3/gaps.nix) {};
+
 
   };
 in pkgs // {
