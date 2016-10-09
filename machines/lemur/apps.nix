@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
 
     # programming utilities
-    sheenobupkgs.riot
+    #sheenobupkgs.riot
     gcc
     #python35Packages.awscli
     sheenobupkgs.docker-compose
