@@ -7,6 +7,7 @@
     gcc
     #python35Packages.awscli
     sheenobupkgs.docker-compose
+    go
 
     # browsers
     chromium
@@ -24,7 +25,7 @@
 
     # emulation
     qemu
-    backports.mednaffe
+    mednaffe
     dosbox
 
     # terminal
@@ -32,7 +33,9 @@
 
     # sec
     keepassx
-    backports.keybase_go
+    keybase
+    kbfs
+    kube-aws
 
     # social
     slack
