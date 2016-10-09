@@ -11,6 +11,7 @@
       "docker"
       "audio"
       "vboxusers"
+      "libvirtd"
     ];
   };
 }
