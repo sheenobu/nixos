@@ -3,7 +3,7 @@ with import <nixhome> { inherit stdenv; inherit pkgs; };
 with import /etc/nixos.git/vim { inherit lib; };
 let
 
-  go = pkgs.go_1_6;
+  go = pkgs.go;
 
   copyFilesInstallPhase = ''
     mkdir $out
@@ -95,8 +95,8 @@ mkHome {
 
     ##### i3 config
 
-    ".config/i3/config" = ./i3config;
-    ".config/i3status/config" = ./i3status;
+    ".config/i3/config" = "${rcfiles}/config/i3config";
+    ".config/i3status/config" = "${rcfiles}/config/i3status";
 
     ##### compton
 
