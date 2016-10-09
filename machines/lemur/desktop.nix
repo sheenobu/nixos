@@ -17,7 +17,6 @@
 
     xorg.xbacklight
     xorg.xwininfo
-    backports.fluxui
 
     # theming
     gtk
