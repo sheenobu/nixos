@@ -7,11 +7,11 @@ let
 
   sheenobupkgs = rec {
     r8168 = (pkgs.callPackage ./r8168/r8168.nix);
-    riot = (pkgs.callPackage ./riot) {};
+    #riot = (pkgs.callPackage ./riot) {};
     osu = (pkgs.callPackage ./osu) {};
     nix-home = (pkgs.callPackage ./nix-home) {};
     docker-compose = (pkgs.callPackage ./docker-compose) {};
-    gb = (pkgs.callPackage ./gb { buildGoPackage = pkgs.go16Packages.buildGoPackage ; }).bin // { outputs = [ "bin" ]; };
+    gb = (pkgs.callPackage ./gb { buildGoPackage = pkgs.buildGo17Package ; }).bin // { outputs = [ "bin" ]; };
   };
 
 in pkgs // {
