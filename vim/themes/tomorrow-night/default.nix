@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   src = fetchgit {
     inherit rev;
     url = "https://github.com/chriskempson/tomorrow-theme.git";
-    sha256 = "0wbyjacyaz1579asnhl8nbk5ig66m1csr7fnag7sxrnprqa1vzz5";
+    sha256 = "1afhfnp5ns8iwhf9yc8mgcnkycqwkczzifnwin48ml2vijl14nr2";
   };
 
   installPhase = ''

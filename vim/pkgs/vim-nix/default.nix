@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   src = fetchgit {
     url = "https://github.com/LnL7/vim-nix.git";
     rev = "a61495a762feacc00f24cab4392b09cc3250decf";
-    sha256 = "0larxhc296ly6adfrjq8m76zgwyjiydhfp9ryxxppkgd9zfcgyg4";
+    sha256 = "0icq9nawm6s4qzb9q62y3fdq4ixbfwmmgk141fnfqzq6ya1azxac";
   };
 
   installPhase = copyFilesInstallPhase;
