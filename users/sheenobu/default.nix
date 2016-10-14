@@ -103,6 +103,9 @@ mkHome {
 
     ".config/compton.conf" = "${rcfiles}/config/compton.conf";
 
+    ".themes/Arc-Dark" = "${pkgs.arc-gtk-theme}/share/themes/Arc-Dark";
+    ".themes/Arc" = "${pkgs.arc-gtk-theme}/share/themes/Arc";
+
     ##### xdg
 
     ".config/user-dirs.dirs".content = ''
