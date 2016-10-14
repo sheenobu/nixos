@@ -1,7 +1,0 @@
-{
-  "name": "riot-deps",
-  "version": "1.0.0",
-  "dependencies": {
-    "riot-cli": "2.6.1"
-  }
-}

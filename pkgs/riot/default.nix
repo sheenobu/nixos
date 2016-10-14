@@ -1,5 +1,10 @@
-{ stdenv, nodePackages }:
+{ pkgs, system, stdenv, makeWrapper, nodejs }:
+
+with stdenv.lib;
+
 let
-  np = nodePackages.override { generated = ./package.nix; self = np; };
+  nodePackages = import ./nodepkgs.nix {
+    inherit pkgs system nodejs;
+  };
 in
-np."riot-cli"
+nodePackages.riot-cli
