@@ -91,6 +91,7 @@ mkHome {
     ".nvim/bundle/vim-go" = vimPackages.vimGo;
     ".nvim/bundle/vim-nix" = vimPackages.vimNix;
     ".nvim/bundle/vim-elm" = vimPackages.vimElm;
+    ".nvim/bundle/vim-vala" = vimPackages.vimVala;
     ".nvim/bundle/tomorrow-night" = "${vimThemes.tomorrowNight}/share/vim";
 
     ##### i3 config
