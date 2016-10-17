@@ -17,7 +17,6 @@
 
     xorg.xbacklight
     xorg.xwininfo
-    backports.fluxui
 
     # theming
     gtk
@@ -26,7 +25,6 @@
  ];
 
   environment.variables.BROWSER = "chromium";
-  environment.etc."sheenobu/Xdefaults".source = ./Xdefaults;
 
   # audio support
   nixpkgs.config.pulseaudio = true;
@@ -39,8 +37,7 @@
     enable = true;
     layout = "us";
 
-    windowManager.i3.enable = true;
-    windowManager.i3.configFile = ./i3/config;
+    windowManager.i3-gaps.enable = true;
 
     displayManager.lightdm.enable = true;
   };

@@ -64,7 +64,7 @@ mkHome {
 
         export GOPATH=~/go
         export GOROOT=${go}/share/go/
-        export PATH=$PATH:$GOPATH/bin
+        export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
         export GPG_TTY=$(tty)
       '';
@@ -74,7 +74,7 @@ mkHome {
 
         export GOPATH=~/go
         export GOROOT=${go}/share/go/
-        export PATH=$PATH:$GOPATH/bin
+        export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
         export GPG_TTY=$(tty)
       '';
