@@ -8,6 +8,7 @@
     #python35Packages.awscli
     sheenobupkgs.docker-compose
     go
+    sheenobupkgs.vscode
 
     # browsers
     chromium

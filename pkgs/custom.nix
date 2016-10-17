@@ -12,6 +12,7 @@ let
     nix-home = (pkgs.callPackage ./nix-home) {};
     docker-compose = (pkgs.callPackage ./docker-compose) {};
     gb = (pkgs.callPackage ./gb { buildGoPackage = pkgs.buildGo17Package ; }).bin // { outputs = [ "bin" ]; };
+    vscode = (pkgs.callPackage ./vscode) { }; # not in all-packages yet
   };
 
 in pkgs // {
