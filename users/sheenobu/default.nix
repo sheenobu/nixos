@@ -3,7 +3,12 @@ with import <nixhome> { inherit stdenv; inherit pkgs; };
 with import /etc/nixos.git/vim { inherit lib; };
 let
 
-  go = pkgs.go;
+  go = pkgs.stdenv.lib.overrideDerivation pkgs.go (oldAttrs: {
+    preFixup = ''
+      rm -r $out/share/go/pkg/bootstrap
+      ln -s $out/share/go/bin $out/bin
+    '';
+  });
 
   copyFilesInstallPhase = ''
     mkdir $out
