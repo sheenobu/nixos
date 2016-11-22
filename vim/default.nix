@@ -11,6 +11,7 @@ let
     vimNix = (pkgs.callPackage ./pkgs/vim-nix) {};
     vimElm = (pkgs.callPackage ./pkgs/vim-elm) {};
     vimVala = (pkgs.callPackage ./pkgs/vim-vala) {};
+    vimNerdtree = (pkgs.callPackage ./pkgs/vim-nerdtree) {};
   };
 
 in pkgs // {
