@@ -1,11 +1,11 @@
 { stdenv, fetchurl, docker, bash }:
 stdenv.mkDerivation rec {
-   version = "1.8.0";
+   version = "1.9.0";
    name = "docker-compose-${version}";
 
    src = fetchurl {
      url = "https://github.com/docker/compose/releases/download/${version}/run.sh";
-     sha256 = "07saca5f63p0zib1xjxr6c3rvk3ddwafdxppxbzg8zm3c8kif8np";
+     sha256 = "01ijsb92rdbb2x5kh6v3694pkwrvycrnyqa1kqvxnvxn9600473y";
    };
 
    unpackPhase = ''
