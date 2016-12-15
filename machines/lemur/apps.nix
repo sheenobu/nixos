@@ -5,46 +5,31 @@
     # programming utilities
     sheenobupkgs.riot
     gcc
-    #python35Packages.awscli
     sheenobupkgs.docker-compose
     go
-    sheenobupkgs.vscode
-
-    # browsers
-    chromium
-    firefox
+    kube-aws
+    #python35Packages.awscli # takes a long time to install
 
     # utilities
-    baobab # for filesystem visualization
-    pavucontrol # sound
-    arandr # resolution
-    nitrogen # wallpaper setting
-    spice_gtk # spicy remote desktop
-    xfce.thunar # filesystem
-    gimp # image editing
-    xorg.xkill # killing X windows
+    baobab      # for filesystem visualization
+    pavucontrol # sound control
+    arandr      # resolution
+    spice_gtk   # spicy remote desktop
+    gimp        # image editing
 
     # emulation
     qemu
     mednaffe
     dosbox
 
-    # terminal
-    rxvt_unicode
-
     # sec
     keepassx
     keybase
     kbfs
-    kube-aws
 
     # social
     slack
     hexchat
 
-    # music
-    spotify
   ];
 }
-
-

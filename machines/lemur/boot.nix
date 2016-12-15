@@ -2,8 +2,7 @@
 {
   boot = {
     loader = {
-      #gummiboot.enable = true;
-      systemd-boot.enable = true; # 16.09
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
   };

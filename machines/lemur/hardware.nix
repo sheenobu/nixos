@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
   services.xserver = {
-   videoDrivers = [ "nvidia" ];
+    # videoDrivers = [ "nvidia" ];
   };
 }

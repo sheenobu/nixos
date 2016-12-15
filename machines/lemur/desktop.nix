@@ -4,44 +4,34 @@
 
   environment.systemPackages = with pkgs; [
     rofi         # for app launcher
-    feh          # for background image
+    nitrogen     # for background image
     scrot        # for screenshot
     libnotify    # for notifications
-    tint2        # for taskbar, applet bar
-    conky        # for system status
     xscreensaver # for desktop locking
     compton      # for compositor
     xsel         # for cli copy/paste
-    lxappearance # for theming changes
-    i3status
+    i3status     # for i3bar
+    rxvt_unicode # terminal
 
-    xorg.xbacklight
+    # x11 utilities
     xorg.xwininfo
-
-    # theming
-    gtk
-    arc-gtk-theme
-    gtk-engine-murrine
- ];
+    xorg.xkill
+  ];
 
   environment.variables.BROWSER = "chromium";
 
-  # audio support
-  nixpkgs.config.pulseaudio = true;
-
-  # flash support and encryption support
-  nixpkgs.config.chromium.enableWideVine = true;
-  nixpkgs.config.chromium.enablePepperFlash = true;
-
+  # Run xfce as the desktop manager but replace the window manager
+  # with i3-gaps.
   services.xserver = {
     enable = true;
     layout = "us";
 
+    desktopManager.xfce.enable = true;
     windowManager.i3-gaps.enable = true;
-
-    displayManager.slim.enable = true;
+    displayManager.lightdm.enable = true;
   };
 
+  # Font configuration
   fonts = {
     fontconfig = {
       enable = true;
@@ -53,13 +43,10 @@
 
     fonts = with pkgs; [
       terminus_font
-      corefonts  # Micrsoft free fonts
+      corefonts  # Microsoft free fonts
       inconsolata  # monospaced
       ubuntu_font_family  # Ubuntu fonts
       unifont # some international languages
     ];
   };
-
-
 }
-
