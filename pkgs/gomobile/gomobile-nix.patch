@@ -1,0 +1,37 @@
+diff --git a/cmd/gomobile/init.go b/cmd/gomobile/init.go
+index 769d61e..aca8288 100644
+--- a/cmd/gomobile/init.go
++++ b/cmd/gomobile/init.go
+@@ -447,6 +447,7 @@ func fetchNDK() error {
+ 			if goos == "windows" {
+ 				name += ".exe"
+ 			}
++			patchelf(filepath.Join(dst, "bin", toolchain.toolPrefix+"-"+name))
+ 			if err := symlink(filepath.Join(dst, "bin", toolchain.toolPrefix+"-"+name), filepath.Join(linkpath, name)); err != nil {
+ 				return err
+ 			}
+@@ -464,6 +465,7 @@ func fetchNDK() error {
+ 				fromname += ".exe"
+ 				toname += ".exe"
+ 			}
++			patchelf(filepath.Join(llvmdst, "bin", fromname))
+ 			if err := symlink(filepath.Join(llvmdst, "bin", fromname), filepath.Join(dst, "bin", toolchain.toolPrefix+"-"+toname)); err != nil {
+ 				return err
+ 			}
+diff --git a/cmd/gomobile/nix.go b/cmd/gomobile/nix.go
+new file mode 100644
+index 0000000..7e79f81
+--- /dev/null
++++ b/cmd/gomobile/nix.go
+@@ -0,0 +1,11 @@
++package main
++
++import "os/exec"
++
++// patchelf patches a binary to run on nixos natively
++func patchelf(name string) {
++	_, err := exec.Command("/usr/bin/patchelf", "--set-interpreter", "/lib64/ld-linux-x86-64.so.2", name).Output()
++	if err != nil {
++		panic(err)
++	}
++}
