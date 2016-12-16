@@ -1,5 +1,5 @@
 { stdenv, buildGoPackage, fetchgit,
-  glibc, ncurses5, zlib, androidsdk,
+  glibc, ncurses5, zlib,
   makeWrapper, patchelf
 }:
 let
@@ -26,7 +26,6 @@ buildGoPackage rec {
   patches = [ ./gomobile-nix.patch ];
 
   postPatch = ''
-    substituteInPlace cmd/gomobile/install.go --replace "`adb`" "`${androidsdk}/bin/adb`"
     substituteInPlace cmd/gomobile/nix.go --replace "/usr/bin/patchelf" "${patchelf}/bin/patchelf"
     substituteInPlace cmd/gomobile/nix.go --replace "/lib64/ld-linux-x86-64.so.2" "${glibc}/lib/ld-linux-x86-64.so.2"
   '';
