@@ -57,7 +57,6 @@
     gitAndTools.gitflow
     mercurial
     gnumake
-    sheenobupkgs.gb
 
     # manpages
     posix_man_pages
