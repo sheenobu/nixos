@@ -16,9 +16,6 @@
 	};
 
 	hardware = {
-		opengl.driSupport32Bit = true;
-		bluetooth = {
-			enable = true;
-		};
+		bluetooth.enable = true;
 	};
 }

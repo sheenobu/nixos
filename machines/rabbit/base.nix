@@ -2,6 +2,11 @@
 {
     nixpkgs.config.allowUnfree = true;
 
+    programs.tmux = {
+      enable = true;
+      extraTmuxConf = builtins.readFile ./tmux/config;
+    };
+
     nixpkgs.config.packageOverrides = pkgs: {
         bluez = pkgs.bluez5;
     };
@@ -18,11 +23,11 @@
         support32Bit = true;
         package = pkgs.pulseaudioFull;
     };
+    nixpkgs.config.pulseaudio = true;
 
     virtualisation.docker.enable = true;
 
     networking = {
         networkmanager.enable = true;
-        enableIPv6 = false;
     };
 }
