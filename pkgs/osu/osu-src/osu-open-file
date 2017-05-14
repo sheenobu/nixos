@@ -1,5 +1,0 @@
-#/bin/sh
-
-wp=`winepath -w "$1"`
-echo $wp
-wine "C:\osu!\osu!.exe" $wp

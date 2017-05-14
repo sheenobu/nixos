@@ -3,12 +3,8 @@
 
   imports = [
     ./xdg.nix
-    ./asterisk.nix
-    ./custompkgs.nix
-    ./elk.nix
     ./users.nix
   ];
-
 
   # let's make sure only NixOS can handle users
   #users.mutableUsers = false;
@@ -46,8 +42,9 @@
     nix-repl
     nixops
     nox
-    sheenobupkgs.nix-home
-    nix-prefetch-zip
+    (pkgs.callPackage ../pkgs/nix-home {})
+
+    #nix-prefetch-zip
     nix-prefetch-git
     patchelf
 

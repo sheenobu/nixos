@@ -9,6 +9,7 @@
     defaultLocale = "en_US.UTF-8";
   };
 
+  networking.enableIPv6 = true;
   networking.nameservers = [ "192.168.1.1" ];
 
   # Enable 32bit opengl DRI. Useful for

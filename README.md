@@ -1,6 +1,6 @@
 # sheenobu/nixos
 
-My nixos setup.
+Nixos setup.
 
 ## lib
 
@@ -26,20 +26,14 @@ environment.xdg.mimeTypes."text/nix" = {
 
 ## Packages
 
-The packages are split into two separate parts:
-
- * `pkgs.sheenobupkgs` defined in [pkgs/custom.nix](pkgs/custom.nix), for custom packages.
- * `pkgs.backports` defined in [pkgs/backports.nix](pkgs/backports.nix), for backports from the next release to the current.
+The only package we currently include in core config is `nix-home`. Everything
+else is handled on a per-user basis.
 
 ## Modules
 
 Contains various modules which define things or provide configurations:
 
- * Asterisk 13.10.0 setup [modules/asterisk.nix](modules/asterisk.nix)
- * An elk configuration stack - [NixOS Recipes - ELK Stack](https://sheenobu.net/nixos-recipes/elk.html).
  * An XDG import and example usage [modules/xdg.nix](modules/xdg.nix)
- * Imports of the package groups into the `pkgs` namespace.
- * Backport of the tmux module from 16.09
 
 ## Testing
 
